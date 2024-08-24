@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 2</title>
+    <style>
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 40px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="number"],
+        textarea {
+            width: 96%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 2px solid rgb(0, 119, 166);
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #005eca;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1646e4;
+        }
+    </style>
+</head>
+<body>
+
+  <h1 style="color: #005eca;" align="center">Html Form</h1>
+
+  <form id="sheetdb-form" action="https://sheetdb.io/api/v1/s761ibb67a30h" method="post">
+
+    <label for="name">Name:</label>
+    <input type="text" name="data[name]" id="name" placeholder="Enter your Name">
+
+    <label for="email">Email:</label>
+    <input type="email" name="data[email]" id="email" placeholder="Enter valid Email">
+
+    <label for="pass">Password</label>
+    <input type="password" name="data[password]" id="pass" placeholder="Enter Password">
+
+    <label for="date">Birth Date:</label>
+    <input type="date" name="data[birthdate]" id="date">
+
+    <label for="age">Age:</label>
+    <input type="text" name="data[age]" id="age" placeholder="Enter Age">
+
+    <label for="gender">Gender:</label>
+    <input type="radio" name="data[gender]" id="male" value="Male">
+    <label for="male">Male</label>
+    <input type="radio" name="data[gender]" id="female" value="Female">
+    <label for="female">Female</label>
+    <input type="radio" name="data[gender]" id="transgender" value="Transgender">
+    <label for="transgender">Transgender</label>
+
+    <br><br>
+
+    <label for="course">Select Course:</label>
+    <select name="data[course]" id="course">
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JAVASCRIPT">JAVASCRIPT</option>
+        <option value="REACT">REACT</option>
+    </select>
+
+    <br><br>
+
+    <label for="choices">Choice:</label>
+    <input type="checkbox" name="data[favourite][]" value="Karate" id="karate">
+    <label for="karate">Karate</label>
+    <input type="checkbox" name="data[favourite][]" value="Fitness" id="fitness">
+    <label for="fitness">Fitness</label>
+    <input type="checkbox" name="data[favourite][]" value="Singing" id="singing">
+    <label for="singing">Singing</label>
+
+    <br><br>
+
+    <label for="image">Profile Picture:</label>
+    <input type="file" name="data[photo]" id="image" accept="image/*">
+
+    <br><br>
+
+    <label for="message">Message:</label>
+    <textarea name="data[message]" id="message" cols="30" rows="5" placeholder="Tell me about yourself....."></textarea>
+
+    <input align="center" type="submit" value="Submit">
+
+  </form>
+    
+</body>
+</html>
